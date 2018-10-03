@@ -1,0 +1,28 @@
+$fa-font-path: '/static/fonts/font-awesome';
+
+@import "~font-awesome/scss/font-awesome";
+
+@import "theme/variables";
+@import "theme/spectre-icons";
+@import "theme/spectre";
+@import "theme/spectre-exp";
+@import "theme/typography";
+
+
+@import "components/globals";
+@import "components/navbar";
+@import "components/button";
+@import "components/section";
+@import "components/modal";
+
+
+@import "components/jumbotron";
+@import "components/footer";
+@import "components/about";
+@import "components/partners";
+
+@import "components/wave";
+
+@import "pages/all";
+
+@import "common/animations";

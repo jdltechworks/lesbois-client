@@ -1,0 +1,175 @@
+
+.navbar {
+    &-brand {
+        overflow: hidden;
+        height: 33px;
+        img {
+            display: block;
+        }
+    }
+    &-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999999;
+        @media only screen and (max-width: $size-sm) {
+            height: 415px;
+        }
+        &.switched {
+
+            a.navbar-brand {
+                img {
+                    animation-name: flip;
+                    animation-duration: .5s;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .navbar-menu {
+                li {
+                    a {
+                        animation-name: changeColor;
+                        animation-duration: .5s;
+                        animation-fill-mode: forwards;
+                        animation-direction: normal;
+                    }
+                }
+            }
+            .navbar-section {
+                background: #fff;
+            }
+        }
+        .container {
+            @media only screen and (max-width: $size-md) {
+                padding: 0;
+            }
+        }
+    }
+    &-menu {
+        margin: 0;
+        padding: 0;
+        @media only screen and (max-width: $size-sm) {
+            width: 100%;
+        }
+        &-item {
+            @media only screen and (max-width: $size-sm) {
+                display: block;
+                float: none;
+            }
+            display: inline-table;
+            margin: 0;
+            a {
+                display: block;
+                padding: 25px 10px;
+                color: #fff;
+                opacity: .8;
+                letter-spacing: 1px;
+                &:any-link {
+                    text-decoration: none;
+                }
+            }
+            &:last-child {
+                a {
+                    padding: 25px 0 25px 10px;
+                }
+            }
+        }
+    }
+    &-section {
+        @media only screen and (max-width: $size-sm) {
+            width: 100%;
+            flex: none !important;
+            background: linear-gradient(to right, #362b72, #e6406b);
+            &:first-child {
+                padding: 25px;
+                position: relative;
+                z-index: 999;
+            }
+            &:last-child {
+                justify-content: flex-start !important;
+                position: absolute;
+                z-index: 888;
+            }
+        }
+        @media only screen and (max-width: $size-md) {
+            flex: none !important;
+        }
+        @media only screen and (max-width: $size-lg) {
+            flex: none !important;
+        }
+        @media only screen and (max-width: 1024px) {
+            flex: none !important;
+        }
+    }
+}
+
+.mobilenav-leave {
+	animation: slideUp 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+	opacity: 1.0;
+}
+
+.mobilenav-enter {
+	opacity: 0;
+	animation: slideDown 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translate3d(-50px, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+}
+
+
+@keyframes changeColor {
+    from {
+        color: #fff;
+    }
+    to {
+        color: $primary-color;
+    }
+}
+
+@keyframes flip {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-33px);
+    }
+}

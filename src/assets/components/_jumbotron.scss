@@ -1,0 +1,42 @@
+.jumbotron {
+    background: linear-gradient(to right, #362b72, #e6406b);
+    padding: 5% 0;
+    position: relative;
+    overflow: hidden;
+    .heading,
+    .sub-heading {
+        color: #ffffff;
+        @media only screen and (max-width: $size-lg) {
+            text-align: center;
+        }
+        @media only screen and (max-width: $size-md) {
+
+        }
+    }
+    img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+
+    &-content {
+        @media only screen and (max-width: $size-lg) {
+            .btn {
+                display: block;
+                margin: auto;
+            }
+        }
+        h2 {
+            font-size: 50.9pt;
+        }
+        h1, h3 {
+            line-height: 2.5;
+            letter-spacing: 3px;
+        }
+        h3 {
+            font-family: MontserratLight;
+            margin-bottom: 2em;
+            font-size: 19px;
+        }
+    }
+}

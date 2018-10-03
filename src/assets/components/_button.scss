@@ -1,0 +1,16 @@
+.btn {
+    border-radius: 36px;
+    box-shadow: 1.1px 10.9px 29px 0 rgba(0, 0, 0, 0.13);
+
+    &.btn-default {
+        color: #ce3d6c;
+        border-color: transparent;
+    }
+
+    &.btn-huge {
+        padding: 32px 68px 28px 64px;
+        line-height: 0px;
+        font-size: 15px;
+        letter-spacing: 1.4px;
+    }
+}
